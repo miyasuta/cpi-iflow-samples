@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><bpmn2:definitions xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:ifl="http:///com.sap.ifl.model/Ifl.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_1">
     <bpmn2:collaboration id="Collaboration_1" name="Default Collaboration">
-        <bpmn2:documentation id="Documentation_1791801929865" textFormat="text/plain">Description edited on UI</bpmn2:documentation>
+        <bpmn2:documentation id="Documentation_1791802014773" textFormat="text/plain">Description edited on UI</bpmn2:documentation>
         <bpmn2:extensionElements>
             <ifl:property>
                 <key>namespaceMapping</key>
@@ -208,7 +208,7 @@
             <bpmn2:extensionElements>
                 <ifl:property>
                     <key>bodyType</key>
-                    <value>constant</value>
+                    <value>expression</value>
                 </ifl:property>
                 <ifl:property>
                     <key>propertyTable</key>
@@ -220,7 +220,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>wrapContent</key>
-                    <value/>
+                    <value>Constant header: ${header.X-S01-Constant}, Expression header: ${header.X-S01-Expression}, Property: ${property.s01Property}</value>
                 </ifl:property>
                 <ifl:property>
                     <key>componentVersion</key>
