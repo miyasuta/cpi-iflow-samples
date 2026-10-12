@@ -1,5 +1,5 @@
 # cpi-iflow-samples
 
-Cloud Integration の Git Access の Push 先。iFlow の見本と差分履歴を置く。
+Push target for Cloud Integration Git Access. Holds sample iFlows and their change history.
 
-スキル本体: https://github.com/miyasuta/cpi-iflow-skill
+Skill repository: https://github.com/miyasuta/cpi-iflow-skill
