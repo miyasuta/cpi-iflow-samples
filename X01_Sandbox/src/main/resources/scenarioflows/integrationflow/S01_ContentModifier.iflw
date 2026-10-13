@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><bpmn2:definitions xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:ifl="http:///com.sap.ifl.model/Ifl.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_1">
     <bpmn2:collaboration id="Collaboration_1" name="Default Collaboration">
-        <bpmn2:documentation id="Documentation_1791849663877" textFormat="text/plain">Description edited locally (Experiment B)</bpmn2:documentation>
+        <bpmn2:documentation id="Documentation_1791849936972" textFormat="text/plain">Description edited locally (Experiment B)</bpmn2:documentation>
         <bpmn2:extensionElements>
             <ifl:property>
                 <key>namespaceMapping</key>
@@ -308,18 +308,18 @@
                 <dc:Bounds height="140.0" width="100.0" x="40.0" y="100.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="CallActivity_Local1" id="BPMNShape_CallActivity_Local1">
-                <dc:Bounds height="60.0" width="100.0" x="-500.0" y="5000.0"/>
+                <dc:Bounds height="60.0" width="100.0" x="560.0" y="132.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Participant_Process_1" id="BPMNShape_Participant_Process_1">
                 <dc:Bounds height="220.0" width="540.0" x="250.0" y="60.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNEdge bpmnElement="SequenceFlow_Local1" id="BPMNEdge_SequenceFlow_Local1" sourceElement="BPMNShape_CallActivity_Local1" targetElement="BPMNShape_EndEvent_2">
-                <di:waypoint x="0.0" xsi:type="dc:Point" y="0.0"/>
-                <di:waypoint x="0.0" xsi:type="dc:Point" y="0.0"/>
+                <di:waypoint x="610.0" xsi:type="dc:Point" y="160.0"/>
+                <di:waypoint x="719.0" xsi:type="dc:Point" y="160.0"/>
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge bpmnElement="SequenceFlow_6" id="BPMNEdge_SequenceFlow_6" sourceElement="BPMNShape_CallActivity_5" targetElement="BPMNShape_CallActivity_Local1">
-                <di:waypoint x="0.0" xsi:type="dc:Point" y="0.0"/>
-                <di:waypoint x="0.0" xsi:type="dc:Point" y="0.0"/>
+                <di:waypoint x="462.0" xsi:type="dc:Point" y="160.0"/>
+                <di:waypoint x="719.0" xsi:type="dc:Point" y="160.0"/>
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge bpmnElement="SequenceFlow_3" id="BPMNEdge_SequenceFlow_3" sourceElement="BPMNShape_StartEvent_2" targetElement="BPMNShape_CallActivity_5">
                 <di:waypoint x="308.0" xsi:type="dc:Point" y="160.0"/>
