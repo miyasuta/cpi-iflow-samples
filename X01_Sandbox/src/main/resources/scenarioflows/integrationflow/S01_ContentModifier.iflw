@@ -246,7 +246,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>wrapContent</key>
-                    <value>Local change A</value>
+                    <value>Constant header: ${header.X-S01-Constant}, Expression header: ${header.X-S01-Expression}, Property: ${property.s01Property}</value>
                 </ifl:property>
                 <ifl:property>
                     <key>componentVersion</key>
