@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><bpmn2:definitions xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:ifl="http:///com.sap.ifl.model/Ifl.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_1">
     <bpmn2:collaboration id="Collaboration_1" name="Default Collaboration">
-        <bpmn2:documentation id="Documentation_1791850477620" textFormat="text/plain">Local change C (Experiment F)</bpmn2:documentation>
+        <bpmn2:documentation id="Documentation_1791973838961" textFormat="text/plain">Description edited locally (Experiment B)</bpmn2:documentation>
         <bpmn2:extensionElements>
             <ifl:property>
                 <key>namespaceMapping</key>
@@ -212,7 +212,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>wrapContent</key>
-                    <value>Step 2 reached. ${header.X-S01-Constant}</value>
+                    <value>UI change B. ${header.X-S01-Constant}</value>
                 </ifl:property>
                 <ifl:property>
                     <key>componentVersion</key>
@@ -246,7 +246,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>wrapContent</key>
-                    <value>Constant header: ${header.X-S01-Constant}, Expression header: ${header.X-S01-Expression}, Property: ${property.s01Property}</value>
+                    <value>UI change A</value>
                 </ifl:property>
                 <ifl:property>
                     <key>componentVersion</key>
