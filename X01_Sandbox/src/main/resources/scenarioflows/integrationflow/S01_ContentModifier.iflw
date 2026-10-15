@@ -211,8 +211,12 @@
                     <value>expression</value>
                 </ifl:property>
                 <ifl:property>
+                    <key>headerTable</key>
+                    <value>&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;constant&lt;/cell&gt;&lt;cell id='Value'&gt;eval-one&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;X-Eval1&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;</value>
+                </ifl:property>
+                <ifl:property>
                     <key>wrapContent</key>
-                    <value>UI change B. ${header.X-S01-Constant}</value>
+                    <value>${header.X-Eval1}</value>
                 </ifl:property>
                 <ifl:property>
                     <key>componentVersion</key>
