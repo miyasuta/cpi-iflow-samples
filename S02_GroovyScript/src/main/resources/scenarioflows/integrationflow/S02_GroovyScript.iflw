@@ -129,7 +129,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>xsrfProtection</key>
-                    <value>1</value>
+                    <value>0</value>
                 </ifl:property>
                 <ifl:property>
                     <key>TransportProtocol</key>
@@ -242,7 +242,7 @@
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge bpmnElement="MessageFlow_4" id="BPMNEdge_MessageFlow_4" sourceElement="BPMNShape_Participant_1" targetElement="BPMNShape_StartEvent_2">
                 <di:waypoint x="90.0" xsi:type="dc:Point" y="170.0"/>
-                <di:waypoint x="292.5" xsi:type="dc:Point" y="158.0"/>
+                <di:waypoint x="308.0" xsi:type="dc:Point" y="158.0"/>
             </bpmndi:BPMNEdge>
         </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>
