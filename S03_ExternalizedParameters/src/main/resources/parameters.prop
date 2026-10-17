@@ -1,4 +1,5 @@
-#Sat Oct 17 20:58:29 UTC 2026
-s03Address=/s03/externalized-parameters
-s03Body=S03 base body
-s03Greeting=hello
+#
+#Sat Oct 17 21:02:30 UTC 2026
+s03Address=/s03/configured
+s03Body=S03 configured body
+s03Greeting=configured
