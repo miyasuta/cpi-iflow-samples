@@ -109,7 +109,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>urlPath</key>
-                    <value>/x03/eval1</value>
+                    <value>{{x03Address}}</value>
                 </ifl:property>
                 <ifl:property>
                     <key>Name</key>
