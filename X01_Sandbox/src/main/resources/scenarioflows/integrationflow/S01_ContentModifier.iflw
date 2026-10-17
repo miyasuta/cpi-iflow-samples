@@ -269,8 +269,42 @@
                     <value>ctype::FlowstepVariant/cname::Enricher/version::1.6.5</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_Local1</bpmn2:incoming>
+            <bpmn2:incoming>SequenceFlow_Local3</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_Local2</bpmn2:outgoing>
+        </bpmn2:callActivity>
+        <bpmn2:callActivity id="CallActivity_Local3" name="Groovy Script 1">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>scriptFunction</key>
+                    <value/>
+                </ifl:property>
+                <ifl:property>
+                    <key>scriptBundleId</key>
+                    <value/>
+                </ifl:property>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.1</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>Script</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::GroovyScript/version::1.1.2</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>subActivityType</key>
+                    <value>GroovyScript</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>script</key>
+                    <value>script1.groovy</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_Local1</bpmn2:incoming>
+            <bpmn2:outgoing>SequenceFlow_Local3</bpmn2:outgoing>
         </bpmn2:callActivity>
         <bpmn2:callActivity id="CallActivity_Local1" name="Added Locally">
             <bpmn2:extensionElements>
@@ -318,13 +352,14 @@
         </bpmn2:startEvent>
         <bpmn2:sequenceFlow id="SequenceFlow_6" sourceRef="CallActivity_5" targetRef="CallActivity_Local1"/>
         <bpmn2:sequenceFlow id="SequenceFlow_Local2" sourceRef="CallActivity_Local2" targetRef="EndEvent_2"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_Local1" sourceRef="CallActivity_Local1" targetRef="CallActivity_Local2"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_Local1" sourceRef="CallActivity_Local1" targetRef="CallActivity_Local3"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_Local3" sourceRef="CallActivity_Local3" targetRef="CallActivity_Local2"/>
         <bpmn2:sequenceFlow id="SequenceFlow_3" sourceRef="StartEvent_2" targetRef="CallActivity_5"/>
     </bpmn2:process>
     <bpmndi:BPMNDiagram id="BPMNDiagram_1" name="Default Collaboration Diagram">
         <bpmndi:BPMNPlane bpmnElement="Collaboration_1" id="BPMNPlane_1">
             <bpmndi:BPMNShape bpmnElement="EndEvent_2" id="BPMNShape_EndEvent_2">
-                <dc:Bounds height="32.0" width="32.0" x="842.0" y="124.0"/>
+                <dc:Bounds height="32.0" width="32.0" x="1002.0" y="124.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="StartEvent_2" id="BPMNShape_StartEvent_2">
                 <dc:Bounds height="32.0" width="32.0" x="270.0" y="124.0"/>
@@ -333,7 +368,7 @@
                 <dc:Bounds height="60.0" width="100.0" x="362.0" y="110.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Participant_2" id="BPMNShape_Participant_2">
-                <dc:Bounds height="140.0" width="100.0" x="1018.0" y="114.0"/>
+                <dc:Bounds height="140.0" width="100.0" x="1178.0" y="114.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Participant_1" id="BPMNShape_Participant_1">
                 <dc:Bounds height="140.0" width="100.0" x="50.0" y="70.0"/>
@@ -342,18 +377,25 @@
                 <dc:Bounds height="60.0" width="100.0" x="522.0" y="110.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Participant_Process_1" id="BPMNShape_Participant_Process_1">
-                <dc:Bounds height="137.0" width="708.0" x="250.0" y="60.0"/>
+                <dc:Bounds height="137.0" width="868.0" x="250.0" y="60.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="CallActivity_Local2" id="BPMNShape_CallActivity_Local2">
+                <dc:Bounds height="60.0" width="100.0" x="842.0" y="110.0"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="CallActivity_Local3" id="BPMNShape_CallActivity_Local3">
                 <dc:Bounds height="60.0" width="100.0" x="682.0" y="110.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNEdge bpmnElement="SequenceFlow_Local2" id="BPMNEdge_SequenceFlow_Local2" sourceElement="BPMNShape_CallActivity_Local2" targetElement="BPMNShape_EndEvent_2">
-                <di:waypoint x="782.0" xsi:type="dc:Point" y="140.0"/>
-                <di:waypoint x="842.0" xsi:type="dc:Point" y="140.0"/>
+                <di:waypoint x="942.0" xsi:type="dc:Point" y="140.0"/>
+                <di:waypoint x="1002.0" xsi:type="dc:Point" y="140.0"/>
             </bpmndi:BPMNEdge>
-            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_Local1" id="BPMNEdge_SequenceFlow_Local1" sourceElement="BPMNShape_CallActivity_Local1" targetElement="BPMNShape_CallActivity_Local2">
+            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_Local1" id="BPMNEdge_SequenceFlow_Local1" sourceElement="BPMNShape_CallActivity_Local1" targetElement="BPMNShape_CallActivity_Local3">
                 <di:waypoint x="622.0" xsi:type="dc:Point" y="140.0"/>
                 <di:waypoint x="682.0" xsi:type="dc:Point" y="140.0"/>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_Local3" id="BPMNEdge_SequenceFlow_Local3" sourceElement="BPMNShape_CallActivity_Local3" targetElement="BPMNShape_CallActivity_Local2">
+                <di:waypoint x="782.0" xsi:type="dc:Point" y="140.0"/>
+                <di:waypoint x="842.0" xsi:type="dc:Point" y="140.0"/>
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge bpmnElement="SequenceFlow_6" id="BPMNEdge_SequenceFlow_6" sourceElement="BPMNShape_CallActivity_5" targetElement="BPMNShape_CallActivity_Local1">
                 <di:waypoint x="462.0" xsi:type="dc:Point" y="140.0"/>
