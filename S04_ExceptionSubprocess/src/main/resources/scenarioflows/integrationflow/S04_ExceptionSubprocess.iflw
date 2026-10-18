@@ -215,9 +215,43 @@
                         <value>ctype::FlowstepVariant/cname::MessageEndEvent/version::1.1.0</value>
                     </ifl:property>
                 </bpmn2:extensionElements>
-                <bpmn2:incoming>SequenceFlow_8</bpmn2:incoming>
+                <bpmn2:incoming>SequenceFlow_10</bpmn2:incoming>
                 <bpmn2:messageEventDefinition/>
             </bpmn2:endEvent>
+            <bpmn2:callActivity id="CallActivity_9" name="Build Error Response">
+                <bpmn2:extensionElements>
+                    <ifl:property>
+                        <key>bodyType</key>
+                        <value>expression</value>
+                    </ifl:property>
+                    <ifl:property>
+                        <key>propertyTable</key>
+                        <value/>
+                    </ifl:property>
+                    <ifl:property>
+                        <key>headerTable</key>
+                        <value>&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;constant&lt;/cell&gt;&lt;cell id='Value'&gt;500&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;CamelHttpResponseCode&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;constant&lt;/cell&gt;&lt;cell id='Value'&gt;caught&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;X-S04-Error&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;</value>
+                    </ifl:property>
+                    <ifl:property>
+                        <key>wrapContent</key>
+                        <value>S04 error: ${exception.message}</value>
+                    </ifl:property>
+                    <ifl:property>
+                        <key>componentVersion</key>
+                        <value>1.6</value>
+                    </ifl:property>
+                    <ifl:property>
+                        <key>activityType</key>
+                        <value>Enricher</value>
+                    </ifl:property>
+                    <ifl:property>
+                        <key>cmdVariantUri</key>
+                        <value>ctype::FlowstepVariant/cname::Enricher/version::1.6.5</value>
+                    </ifl:property>
+                </bpmn2:extensionElements>
+                <bpmn2:incoming>SequenceFlow_8</bpmn2:incoming>
+                <bpmn2:outgoing>SequenceFlow_10</bpmn2:outgoing>
+            </bpmn2:callActivity>
             <bpmn2:startEvent id="StartEvent_6" name="Error Start 1">
                 <bpmn2:outgoing>SequenceFlow_8</bpmn2:outgoing>
                 <bpmn2:errorEventDefinition>
@@ -233,7 +267,8 @@
                     </bpmn2:extensionElements>
                 </bpmn2:errorEventDefinition>
             </bpmn2:startEvent>
-            <bpmn2:sequenceFlow id="SequenceFlow_8" sourceRef="StartEvent_6" targetRef="EndEvent_7"/>
+            <bpmn2:sequenceFlow id="SequenceFlow_10" sourceRef="CallActivity_9" targetRef="EndEvent_7"/>
+            <bpmn2:sequenceFlow id="SequenceFlow_8" sourceRef="StartEvent_6" targetRef="CallActivity_9"/>
         </bpmn2:subProcess>
         <bpmn2:callActivity id="CallActivity_Local1" name="Throw Exception">
             <bpmn2:extensionElements>
@@ -302,6 +337,9 @@
     </bpmn2:process>
     <bpmndi:BPMNDiagram id="BPMNDiagram_1" name="Default Collaboration Diagram">
         <bpmndi:BPMNPlane bpmnElement="Collaboration_1" id="BPMNPlane_1">
+            <bpmndi:BPMNShape bpmnElement="StartEvent_6" id="BPMNShape_StartEvent_6">
+                <dc:Bounds height="32.0" width="32.0" x="311.0" y="276.0"/>
+            </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="EndEvent_2" id="BPMNShape_EndEvent_2">
                 <dc:Bounds height="32.0" width="32.0" x="522.0" y="124.0"/>
             </bpmndi:BPMNShape>
@@ -317,17 +355,17 @@
             <bpmndi:BPMNShape bpmnElement="CallActivity_Local1" id="BPMNShape_CallActivity_Local1">
                 <dc:Bounds height="60.0" width="100.0" x="362.0" y="110.0"/>
             </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="EndEvent_7" id="BPMNShape_EndEvent_7">
+                <dc:Bounds height="32.0" width="32.0" x="598.0" y="276.0"/>
+            </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Participant_Process_1" id="BPMNShape_Participant_Process_1">
                 <dc:Bounds height="330.0" width="464.0" x="250.0" y="60.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="SubProcess_5" id="BPMNShape_SubProcess_5">
                 <dc:Bounds height="140.0" width="400.0" x="278.0" y="230.0"/>
             </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape bpmnElement="StartEvent_6" id="BPMNShape_StartEvent_6">
-                <dc:Bounds height="32.0" width="32.0" x="311.0" y="276.0"/>
-            </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape bpmnElement="EndEvent_7" id="BPMNShape_EndEvent_7">
-                <dc:Bounds height="32.0" width="32.0" x="598.0" y="276.0"/>
+            <bpmndi:BPMNShape bpmnElement="CallActivity_9" id="BPMNShape_CallActivity_9">
+                <dc:Bounds height="60.0" width="100.0" x="431.0" y="266.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNEdge bpmnElement="SequenceFlow_Local1" id="BPMNEdge_SequenceFlow_Local1" sourceElement="BPMNShape_CallActivity_Local1" targetElement="BPMNShape_EndEvent_2">
                 <di:waypoint x="462.0" xsi:type="dc:Point" y="140.0"/>
@@ -337,13 +375,17 @@
                 <di:waypoint x="302.0" xsi:type="dc:Point" y="140.0"/>
                 <di:waypoint x="362.0" xsi:type="dc:Point" y="140.0"/>
             </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_8" id="BPMNEdge_SequenceFlow_8" sourceElement="BPMNShape_StartEvent_6" targetElement="BPMNShape_CallActivity_9">
+                <di:waypoint x="327.0" xsi:type="dc:Point" y="294.0"/>
+                <di:waypoint x="481.0" xsi:type="dc:Point" y="294.0"/>
+            </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge bpmnElement="MessageFlow_4" id="BPMNEdge_MessageFlow_4" sourceElement="BPMNShape_Participant_1" targetElement="BPMNShape_StartEvent_2">
                 <di:waypoint x="100.0" xsi:type="dc:Point" y="140.0"/>
                 <di:waypoint x="286.0" xsi:type="dc:Point" y="140.0"/>
             </bpmndi:BPMNEdge>
-            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_8" id="BPMNEdge_SequenceFlow_8" sourceElement="BPMNShape_StartEvent_6" targetElement="BPMNShape_EndEvent_7">
-                <di:waypoint x="327.0" xsi:type="dc:Point" y="292.0"/>
-                <di:waypoint x="614.0" xsi:type="dc:Point" y="292.0"/>
+            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_10" id="BPMNEdge_SequenceFlow_10" sourceElement="BPMNShape_CallActivity_9" targetElement="BPMNShape_EndEvent_7">
+                <di:waypoint x="481.0" xsi:type="dc:Point" y="294.0"/>
+                <di:waypoint x="614.0" xsi:type="dc:Point" y="294.0"/>
             </bpmndi:BPMNEdge>
         </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>
