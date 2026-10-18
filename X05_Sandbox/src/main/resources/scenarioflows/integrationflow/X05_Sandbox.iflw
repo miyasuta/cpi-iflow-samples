@@ -210,7 +210,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>httpMethod</key>
-                    <value>GET</value>
+                    <value>POST</value>
                 </ifl:property>
                 <ifl:property>
                     <key>apiprovider_location_id</key>
