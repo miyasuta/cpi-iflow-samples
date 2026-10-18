@@ -210,7 +210,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>httpMethod</key>
-                    <value>POST</value>
+                    <value>GET</value>
                 </ifl:property>
                 <ifl:property>
                     <key>apiprovider_location_id</key>
@@ -326,7 +326,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>authenticationMethod</key>
-                    <value>OAuth2 Client Credentials</value>
+                    <value>None</value>
                 </ifl:property>
                 <ifl:property>
                     <key>locationID</key>
@@ -350,7 +350,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>credentialName</key>
-                    <value>s05-oauth-client</value>
+                    <value/>
                 </ifl:property>
                 <ifl:property>
                     <key>apiDisplayName</key>
@@ -366,7 +366,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>httpAddressWithoutQuery</key>
-                    <value>https://73447665trial.it-cpitrial05-rt.cfapps.us10-001.hana.ondemand.com/http/s02/groovy-script</value>
+                    <value>https://services.odata.org/V4/Northwind/Northwind.svc/Products(5)</value>
                 </ifl:property>
             </bpmn2:extensionElements>
         </bpmn2:messageFlow>
