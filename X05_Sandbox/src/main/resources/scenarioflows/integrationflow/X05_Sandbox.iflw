@@ -258,7 +258,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>httpAddressQuery</key>
-                    <value/>
+                    <value>$select=ProductID,ProductName</value>
                 </ifl:property>
                 <ifl:property>
                     <key>httpRequestTimeout</key>
@@ -366,7 +366,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>httpAddressWithoutQuery</key>
-                    <value>https://services.odata.org/V4/Northwind/Northwind.svc/Products(2)</value>
+                    <value>https://services.odata.org/V4/Northwind/Northwind.svc/Products(3)</value>
                 </ifl:property>
             </bpmn2:extensionElements>
         </bpmn2:messageFlow>
