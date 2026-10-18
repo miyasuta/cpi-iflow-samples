@@ -258,7 +258,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>httpAddressQuery</key>
-                    <value>$select=ProductID,ProductName</value>
+                    <value/>
                 </ifl:property>
                 <ifl:property>
                     <key>httpRequestTimeout</key>
@@ -326,7 +326,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>authenticationMethod</key>
-                    <value>None</value>
+                    <value>OAuth2 Client Credentials</value>
                 </ifl:property>
                 <ifl:property>
                     <key>locationID</key>
@@ -350,7 +350,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>credentialName</key>
-                    <value/>
+                    <value>s05-oauth-client</value>
                 </ifl:property>
                 <ifl:property>
                     <key>apiDisplayName</key>
@@ -366,7 +366,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>httpAddressWithoutQuery</key>
-                    <value>https://services.odata.org/V4/Northwind/Northwind.svc/Products(3)</value>
+                    <value>https://73447665trial.it-cpitrial05-rt.cfapps.us10-001.hana.ondemand.com/http/s02/groovy-script</value>
                 </ifl:property>
             </bpmn2:extensionElements>
         </bpmn2:messageFlow>
